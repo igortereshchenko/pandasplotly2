@@ -36,7 +36,6 @@ trace2 = go.Pie(
 trace3 = go.Bar(
 x = df_observation_state.index,
     y = df_observation_state.values,
-    mode = 'lines+markers',
     name = 'Observation percent depending on state'
 )
 
