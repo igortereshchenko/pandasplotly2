@@ -19,12 +19,15 @@ df = bq_assistant.query_to_pandas(QUERY)
 print(df)
 
 trace1 = go.Scatter(
-			x=df["sample_measurement"].index,
-			y=df["mdl"],
-			mode="lines"
+	x=df["sample_measurement"].index,
+	y=df["mdl"],
+	mode="lines"
 		)
 trace2 = go.Pie()
-trace3 = go.Bar()
+trace3 = go.Bar(
+			x=df["sample_measurement"].index,
+			y=df["mdl"]
+)
 
 data = [trace1,trace2,trace3]
 
