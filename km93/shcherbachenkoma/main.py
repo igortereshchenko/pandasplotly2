@@ -37,15 +37,20 @@ trace2 = go.Pie(
 
                     )
 
+trace3 = go.Bar(
+                    x=df["date_local"].index,
+                    y=df["date_local"]
+
+)
 
 
 
-data = [trace1, trace2]
+data = [trace1, trace2, trace3]
 
 layout = dict(
               title = '',
               xaxis= dict(title= ''),
               yaxis=dict(title=''),
              )
-fig = dict(data = [trace1, trace2], layout = layout)
+fig = dict(data = [trace1, trace2, trace3], layout = layout)
 plot(fig)
