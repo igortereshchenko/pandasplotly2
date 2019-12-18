@@ -42,4 +42,4 @@ layout2 = go.Layout(
     yaxis=dict(title='Код Fibs'),
 )
 figure1 = go.Figure(data=[trace1], layout=layout1)
-figure2 = go.Figure(data=[trace1], layout=layout1)
+figure2 = go.Figure(data=[trace2], layout=layout2)
