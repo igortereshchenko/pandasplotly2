@@ -30,16 +30,22 @@ trace1 = go.Scatter(
 
                     )
 
+trace2 = go.Pie(
+
+                        labels=df["date_local"],
+                        values=df["date_local"].index,
+
+                    )
 
 
 
 
-data = [trace1]
+data = [trace1, trace2]
 
 layout = dict(
               title = '',
               xaxis= dict(title= ''),
               yaxis=dict(title=''),
              )
-fig = dict(data = [trace1], layout = layout)
+fig = dict(data = [trace1, trace2], layout = layout)
 plot(fig)
