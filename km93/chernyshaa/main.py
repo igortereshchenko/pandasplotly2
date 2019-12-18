@@ -40,7 +40,7 @@ trace1 = go.Bar(
     marker = dict(color = 'rgba(225, 174, 255, 0.5)')
 )
 
-layout3 = go.Layout(
+layout1 = go.Layout(
               title = 'Observation_count relatively county_code',
               xaxis = dict(title = 'county_code'),
               yaxis = dict(title = 'observation_count')
