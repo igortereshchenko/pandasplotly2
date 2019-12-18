@@ -19,6 +19,7 @@ df = bq_assistant.query_to_pandas(QUERY)
 
 print(df.head(3))
 
+df_observation_year = df.groupby(['year'])['observation_percent'].mean()
 df_observation_sample_duration = df.groupby(['sample_duration'])['observation_percent'].mean()
 
 trace1 = go.Scatter(
@@ -30,6 +31,9 @@ trace1 = go.Scatter(
 )
 
 trace2 = go.Pie(
+    labels = df_observation_year.index,
+    values = df_observation_year.values,
+    name = 'Observation percent depending on year'
 
 )
 
@@ -40,12 +44,15 @@ trace3 = go.Bar(
 )
 
 data1 = [trace1]
+data2 = [trace2]
 data3 = [trace3]
 
 layout1 = dict(title = 'Observations percent',xaxis= dict(title= 'year'),
                yaxis=dict(title='average observation percent'))
-layout3 = dict(title='Observations', xaxis=dict(title='sample duration'),
+layout2 = dict(title = 'Observations percent',xaxis= dict(title= 'year'),
+               yaxis=dict(title='average observation percent'))
+layout3 = dict(title='Observations percent', xaxis=dict(title='sample duration'),
                yaxis=dict(title='average observation percent'))
 
-fig = dict(data=data3, layout=layout3)
+fig = dict(data=data2, layout=layout2)
 plot(fig)
