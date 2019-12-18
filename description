@@ -1,0 +1,4 @@
+state_code-The FIPS code of the state in which the monitor resides.
+parameter_name-The name or description assigned in AQS to the parameter measured by the monitor. Parameters may be pollutants or non-pollutants.
+date_local-The calendar date of the sample in Local Standard Time at the monitor.
+mdl-The Method Detection Limit. The minimum sample concentration detectable for the monitor and method. Note: if samples are reported below this level, they may have been replaced by 1/2 the MDL.
