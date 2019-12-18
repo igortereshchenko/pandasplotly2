@@ -23,7 +23,10 @@ trace1 = go.Scatter(
 	y=df["mdl"],
 	mode="lines"
 		)
-trace2 = go.Pie()
+trace2 = go.Pie(
+	labels=df["date_local"],
+	values=df["date_local"].index,
+)
 trace3 = go.Bar(
 			x=df["sample_measurement"].index,
 			y=df["mdl"]
