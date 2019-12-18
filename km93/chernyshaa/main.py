@@ -21,16 +21,17 @@ df = bq_assistant.query_to_pandas(QUERY)
 local_count_1 = df.grouphy(['county_code'])['observation_count'].count()
 local_count_2 = df.grouphy(['county_code'])['observation_count'].count()
 
+
 trace2 = go.Scatter(
-    x=local_count.index,
-    y=local_count.value,
+    x=local_count_2.index,
+    y=local_count_2.value,
     marker=dict(color='rgba(225, 174, 255, 0.5)'
 
 )
 
 trace3 = go.Bar(
-    x = local_count.index,
-    y = local_count.value,
+    x = local_count_1.index,
+    y = local_count_1.value,
     marker = dict(color = 'rgba(225, 174, 255, 0.5)'
 )
 
