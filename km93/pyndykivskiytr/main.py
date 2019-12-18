@@ -32,22 +32,29 @@ layout1= go.Layout(
 figure1 = go.Figure(data=[trace1], layout=layout1)
 
 trace2 = go.Pie(
-
+	labels=arithmetic_mean_count.index,
+    values=arithmetic_mean_count.values
                     )
+
+layout2=go.Layout(
+	title='data',
+    xaxis=dict(title=''),
+    yaxis=dict(title='')
+	)
+
+figure2 = go.Figure(data=[trace2], layout=layout2)
 
 trace3 = go.Bar(
 
 )
 
-data = [trace1]
+#data = [trace1]
 
 layout = dict(
               title = '',
               xaxis= dict(title= ''),
               yaxis=dict(title=''),
              )
-fig = dict(data = [trace1], layout = layout)
+fig = dict(data = [trace2], layout = layout2)
 plot(fig)
-
-
 
