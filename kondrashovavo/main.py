@@ -34,7 +34,8 @@ trace1 = go.Scatter(
 
 
 trace2 = go.Pie(
-
+    labeles = _country_name_count.index
+    values =  _country_name_count.values
                     )
 
 trace3 = go.Bar(
@@ -52,3 +53,4 @@ layout = dict(
              )
 fig = dict(data = [trace1], layout = layout)
 plot(fig)
+
