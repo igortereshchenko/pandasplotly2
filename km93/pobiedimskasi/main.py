@@ -23,6 +23,10 @@ df_observation_sample_duration = df.groupby(['sample_duration'])['observation_pe
 
 trace1 = go.Scatter(
 
+    x = df_observation_year.index,
+    y = df_observation_year.values,
+    name = 'Observation percent depending on year',
+    mode = 'lines+markers'
 )
 
 trace2 = go.Pie(
@@ -35,8 +39,11 @@ trace3 = go.Bar(
     name='Observation percent depending on sample duration'
 )
 
+data1 = [trace1]
 data3 = [trace3]
 
+layout1 = dict(title = 'Observations percent',xaxis= dict(title= 'year'),
+               yaxis=dict(title='average observation percent'))
 layout3 = dict(title='Observations', xaxis=dict(title='sample duration'),
                yaxis=dict(title='average observation percent'))
 
