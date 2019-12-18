@@ -32,8 +32,9 @@ trace1 = go.Scatter(
 
 
 trace2 = go.Pie(
-
-                    )
+    labels=df.num_of_samples.index,
+    values=df.num_of_samples.values
+)
 
 trace3 = go.Bar(
     x=df.num_of_samples.index,
@@ -51,3 +52,5 @@ fig = dict(data=[trace1], layout=layout)
 plot(fig)
 fig_bar = go.Figure(data=[trace3], layout=layout)
 plot(fig_bar)
+fig_pie = go.Figure(data=[trace2])
+plot(fig_pie)
