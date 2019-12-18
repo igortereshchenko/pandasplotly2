@@ -21,8 +21,14 @@ trace1 = go.Scatter(
     x=df['date_local'],
     y=df['sample_measurement']
 )
+trace2 = go.Bar(
+    x=df['date_local'],
+    y=df['sample_measurement']
+)
+trace3 = go.Pie(
+)
 
-data = [trace1]
+data = [trace2]
 
 layout = dict(
     title='Measurement per day in millions',
@@ -30,5 +36,5 @@ layout = dict(
     yaxis=dict(title='Measurement per million')
 )
 
-fig = dict(data=[trace1], layout=layout)
+fig = dict(data=[trace2], layout=layout)
 plot(fig)
