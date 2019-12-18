@@ -15,15 +15,23 @@ QUERY = """
         """
 
 _sample_duration_count = df.groupby(['date_local'])['sample_duration'].count()
+_units_of_measure_count = df.groupby(['date_local'])['units_of_measure'].count()
 
 trace1 = go.Bar(
     x=_sample_duration_count.index,
     y=_sample_duration_count.values
 )
+trace2 = go.Pie(
+    x=_units_of_measure_count.index,
+    y=_units_of_measure_count.values
+)
 layout1 = go.Layout(
     title='Дата відносно часу ',
     xaxis=dict(title='Тривалість часу'),
     yaxis=dict(title=' Дата ')
-)
+
+
 figure1 = go.Figure(data=[trace1], layout=layout1)
 plot(figure1)
+figure2 = go.Figure(data=[trace2], layout=layout2)
+plot(figure2)
