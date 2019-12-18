@@ -1,4 +1,3 @@
-
 import os
 os.environ["GOOGLE_APPLICATION_CREDENTIALS"]="keys.json"
 
@@ -6,7 +5,7 @@ import pandas as pd
 from bq_helper import BigQueryHelper
 import plotly.graph_objs as go
 from plotly.offline import plot
-#bq_assistant = BigQueryHelper('bigquery-public-data','epa_historical_air_quality')
+
 bq_assistant = BigQueryHelper('bigquery-public-data','epa_historical_air_quality')
 
 QUERY = """
@@ -36,25 +35,28 @@ trace2 = go.Pie(
     values=arithmetic_mean_count.values
                     )
 
+
 layout2=go.Layout(
 	title='data',
     xaxis=dict(title=''),
     yaxis=dict(title='')
 	)
 
+
 figure2 = go.Figure(data=[trace2], layout=layout2)
 
 trace3 = go.Bar(
-
+	x=arithmetic_mean_count.index,
+	y=arithmetic_mean_count.values
 )
 
-#data = [trace1]
+
 
 layout = dict(
               title = '',
               xaxis= dict(title= ''),
               yaxis=dict(title=''),
              )
-fig = dict(data = [trace2], layout = layout2)
+fig = dict(data = [trace3])
 plot(fig)
 
