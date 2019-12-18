@@ -36,15 +36,18 @@ trace2 = go.Pie(
                     )
 
 trace3 = go.Bar(
-
+    x=df.num_of_samples.index,
+    y=df.num_of_samples.values
 )
 
 data = [trace1]
 
 layout = dict(
               title='',
-              xaxis=dict(title= ''),
+              xaxis=dict(title=''),
               yaxis=dict(title=''),
              )
 fig = dict(data=[trace1], layout=layout)
 plot(fig)
+fig_bar = go.Figure(data=[trace3], layout=layout)
+plot(fig_bar)
