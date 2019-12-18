@@ -32,8 +32,8 @@ trace2 = go.Scatter(
     mode='lines'
 )
 trace3 = go.Pie(
-    x=_country_code_count.index,
-    y=_country_code_count.values
+    labels=_country_code_count.index,
+    values=_country_code_count.values
 )
 layout1 = go.Layout(
     title='bar',
@@ -46,14 +46,9 @@ layout2 = go.Layout(
     xaxis=dict(title='country_code'),
     yaxis=dict(title='observation_count'),
 )
-layout3 = go.Layout(
-    title='pie',
-    xaxis=dict(title='sit_num'),
-    yaxis=dict(title='country_code'),
-)
 fig1 = go.Figure(data=[trace1], layout=layout1)
 fig2 = go.Figure(data=[trace2], layout=layout2)
-fig3 = go.Figure(data=[trace3], layout=layout3)
+fig3 = go.Figure(data=[trace3])
 plot(fig1)
 plot(fig2)
 plot(fig3)
