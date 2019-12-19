@@ -1,0 +1,5 @@
+state_name - The name of the state where the monitoring site is located.
+sample_measurement - The measured value in the standard units of measure for the parameter.
+date_gmt - The calendar date of the sample in Greenwich Mean Time.
+parameter_name - The name or description assigned in AQS to the parameter measured by the monitor. Parameters may be pollutants or non-pollutants.
+ 
