@@ -1,0 +1,4 @@
+state_code - The FIPS code of the state in which the monitor resides.
+time_local - The time of day that sampling began on a 24-hour clock in Local Standard Time.
+sample_measurem - The measured value in the standard units of measure for the parameter.
+units_of_measure - The unit of measure for the parameter. QAD always returns data in the standard units for the parameter. Submitters are allowed to report data in
