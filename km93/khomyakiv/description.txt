@@ -1,0 +1,4 @@
+1)state_name # state
+2)sample_mesuremets #sample mesurement
+3)date_local #date
+4)mdl
