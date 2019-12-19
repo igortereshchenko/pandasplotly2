@@ -1,0 +1,7 @@
+state_code - The FIPS code of the state in which the monitor resides.
+
+sample_duration - The length of time that air passes through the monitoring device before it is analyzed (measured). So, it represents an
+
+year - The year the annual summary data represents.
+
+observation_count - The number of observations (samples) taken during the year.
