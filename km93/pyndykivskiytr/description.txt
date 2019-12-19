@@ -1,0 +1,4 @@
+state_name (str) : The name of the state where the monitoring site is located.
+date_local (str) : The calendar date for the summary. All daily summaries are for the local standard day (midnight to midnight).
+arithmetic_mean (float) : The average (arithmetic mean) value for the day.
+observation_count (int) : The number of observations (samples) taken during the day.
