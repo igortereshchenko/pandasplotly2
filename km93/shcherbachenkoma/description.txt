@@ -1,0 +1,7 @@
+state_code - the FIPS code of the state in which the monitor resides.
+
+sample_duration - the length of time that air passes through the monitoring device before it is analyzed (measured). So, it represents an averaging period in the atmosphere (for example, a 24-hour sample duration draws ambient air over a collection filter for 24 straight hours). For continuous monitors, it can represent an averaging time of many samples (for example, a 1-hour value may be the average of four one-minute samples collected during each quarter of the hour).
+
+date_local - the calendar date for the summary. All daily summaries are for the local standard day (midnight to midnight) at
+
+observation_count - the number of observations (samples) taken during the day.
