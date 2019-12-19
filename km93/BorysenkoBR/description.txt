@@ -1,0 +1,4 @@
+time_local- The time of day that sampling began on a 24-hour clock in Local Standard Time.
+sample_measurement-The measured value in the standard units of measure for the parameter.
+units_of_measure-The unit of measure for the parameter. QAD always returns data in the standard units for the parameter. Submitters are
+state_name-The name of the state where the monitoring site is located.
