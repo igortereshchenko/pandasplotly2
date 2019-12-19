@@ -1,0 +1,4 @@
+date_local-The calendar date of the sample in Local Standard Time at the monitor.
+sample_measurement-The measured value in the standard units of measure for the parameter.
+method_code-An internal system code indicating the method (processes, equipment, and protocols) used in gathering and measuring
+county_name-The name of the county where the monitoring site is located.
