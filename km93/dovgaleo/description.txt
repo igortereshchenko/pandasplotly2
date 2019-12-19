@@ -1,0 +1,4 @@
+state_code - int; The FIPS code of the state in which the monitor resides.
+date_local - str; The calendar date of the sample in Local Standard Time at the monitor.
+sample_measurement - float; The measured value in the standard units of measure for the parameter.
+units_of_measure -  str; The unit of measure for the parameter. 
