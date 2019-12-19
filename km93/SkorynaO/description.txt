@@ -1,0 +1,5 @@
+
+state-code -  The FIPS code of the state in which the monitor resides.
+parameter_name - The name or description assigned in AQS to the parameter measured by the monitor. Parameters may be pollutants or non-pollutants.
+observation_count - The number of observations (samples) taken during the day.
+arithmetic_mean - The average (arithmetic mean) value for the day.
